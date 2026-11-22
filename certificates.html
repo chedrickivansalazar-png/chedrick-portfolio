@@ -6,7 +6,7 @@
 <title>Certificates · Chedrick Salazar</title>
 <meta name="description" content="Certifications and professional credentials of Chedrick Ivan Salazar, UI/UX Designer.">
 <script>
-  try { var t = localStorage.getItem("portfolio-theme"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  try { var t = localStorage.getItem("portfolio-theme"); document.documentElement.setAttribute("data-theme", t === "dark" ? "dark" : "light"); } catch (e) { document.documentElement.setAttribute("data-theme", "light"); }
   (function () {
     var FRAME = 1089, FILL = 0.8, root = document.documentElement;
     function fit() {
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap">
-<link rel="stylesheet" href="styles.css?v=12">
+<link rel="stylesheet" href="styles.css?v=14">
 </head>
 <body class="certs-page">
 <nav class="nav" id="nav" aria-label="Main">
@@ -53,7 +53,7 @@
 
 <section class="section certs-page" style="padding-bottom:120px">
   <div class="inner">
-    <div class="cert-list carousel-track" id="certs-list" aria-label="Certificates">
+    <div class="cert-list" id="certs-list" aria-label="Certificates">
       <article class="cert-feature">
         <div class="pic">
           <picture>
@@ -71,34 +71,78 @@
           <a class="btn-pill" href="https://coursera.org/verify/professional-cert/ZYHSICMYV543" target="_blank" rel="noopener">View Article</a>
         </div>
       </article>
-      <article class="cert-card">
-        <div class="pic offset">
-          <picture>
-            <source srcset="img/cert-ibm.webp" type="image/webp">
-            <img src="img/cert-ibm.jpg" alt="IBM UI/UX Designer Professional Certificate" width="870" height="652" loading="lazy">
-          </picture>
-        </div>
-        <div class="foot">
-          <div><h3>IBM UI/UX Designer</h3><div class="cmeta"><span>September 28, 2026</span><span>IBM</span></div></div>
-        </div>
+      <article class="cert-item">
+        <div class="pic"><picture><source srcset="img/cert-ibm.webp" type="image/webp"><img src="img/cert-ibm.jpg" alt="IBM UI/UX Designer Professional Certificate" width="870" height="652" loading="lazy"></picture></div>
+        <h3>IBM UI/UX Designer</h3>
+        <div class="cmeta"><span>September 28, 2026</span><span>IBM</span></div>
+        <div class="desc"><p>Earned the IBM UI/UX Designer Professional Certificate (comprising 7 courses) by IBM &amp; SkillUp on Coursera.</p><p>Mastered UI/UX design integrated with Agile/Scrum methodologies, wireframing and prototyping in Figma, UX research, and Generative AI applications.</p></div>
       </article>
-      <article class="cert-card">
-        <div class="pic">
-          <picture>
-            <source srcset="img/cert-genai.webp" type="image/webp">
-            <img src="img/cert-genai.jpg" alt="Generative AI for UI UX Design certificate" width="1650" height="1275" loading="lazy">
-          </picture>
-        </div>
-        <div class="foot">
-          <div><h3>Generative AI for UI UX</h3><div class="cmeta"><span>September 24, 2026</span><span>IBM</span></div></div>
-          <a class="btn-pill" href="https://coursera.org/verify/specialization/KNT0CP72PAKU" target="_blank" rel="noopener">View Article</a>
-        </div>
+      <article class="cert-item">
+        <div class="pic"><picture><source srcset="img/cert-genai.webp" type="image/webp"><img src="img/cert-genai.jpg" alt="Generative AI for UI UX Design certificate" width="1650" height="1275" loading="lazy"></picture></div>
+        <h3>Generative AI for UI/UX Designer</h3>
+        <div class="cmeta"><span>September 24, 2026</span><span>IBM</span></div>
+        <div class="desc"><p>Earned the Generative AI for UI UX Design Specialization (comprising 3 courses) by IBM &amp; SkillUp on Coursera.</p><p>Mastered integrating Generative AI into UI/UX workflows, prompt engineering for design, automated prototyping, AI-driven personalization, and usability testing using AI tools and ChatGPT/LLM frameworks.</p></div>
       </article>
-    </div>
-    <div class="carousel-nav" data-carousel-for="certs-list" data-item="certificate">
-      <button class="arrow prev" type="button" aria-label="Previous certificate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button>
-      <div class="carousel-dots"></div>
-      <button class="arrow next" type="button" aria-label="Next certificate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+      <article class="cert-item">
+        <div class="pic"><picture><source srcset="img/cert-google-ui.webp" type="image/webp"><img src="img/cert-google-ui.jpg" alt="Build Dynamic User Interfaces (UI) for Websites certificate" width="304" height="232" loading="lazy"></picture></div>
+        <h3>Build Dynamic User Interfaces (UI) for Websites</h3>
+        <div class="cmeta"><span>September 24, 2026</span><span>Google</span></div>
+        <div class="desc"><p>Earned the <b>Build Dynamic User Interfaces (UI) for Websites</b> certificate by Google on Coursera.</p><p>Strengthened my knowledge of user interface design principles, dynamic website interfaces, and designing engaging and user-centered digital experiences.</p></div>
+      </article>
+      <article class="cert-item">
+        <div class="pic"><picture><source srcset="img/cert-skillup-uxui.webp" type="image/webp"><img src="img/cert-skillup-uxui.jpg" alt="UX/UI Design Fundamentals: Usability and Visual Principles certificate" width="302" height="231" loading="lazy"></picture></div>
+        <h3>UX/UI Design Fundamentals: Usability and Visual Principles</h3>
+        <div class="cmeta"><span>September 18, 2026</span><span>SkillUp</span></div>
+        <div class="desc"><p>Earned the <b>UX/UI Design Fundamentals: Usability and Visual Principles</b> certificate.</p><p>Strengthened my knowledge of usability, visual hierarchy, layout, typography, and user-centered design principles to create intuitive and engaging digital experiences.</p></div>
+      </article>
+      <article class="cert-item">
+        <div class="pic"><picture><source srcset="img/cert-xbox-product.webp" type="image/webp"><img src="img/cert-xbox-product.jpg" alt="Product Design and UX/UI Fundamentals certificate" width="304" height="233" loading="lazy"></picture></div>
+        <h3>Product Design and UX/UI Fundamentals</h3>
+        <div class="cmeta"><span>September 17, 2026</span><span>XBOX</span></div>
+        <div class="desc"><p>Earned the <b>Product Design and UX/UI Fundamentals</b> certificate.</p><p>Built a strong foundation in product design, user experience, and user interface design, focusing on usability, visual principles, and creating user-centered digital solutions.</p></div>
+      </article>
+      <article class="cert-item">
+        <div class="pic"><picture><source srcset="img/cert-microsoft-uiux.webp" type="image/webp"><img src="img/cert-microsoft-uiux.jpg" alt="Fundamentals of UI/UX Design certificate" width="304" height="231" loading="lazy"></picture></div>
+        <h3>Fundamentals of UI/UX Design</h3>
+        <div class="cmeta"><span>September 15, 2026</span><span>Microsoft</span></div>
+        <div class="desc"><p>Earned the <b>Fundamentals of UI/UX Design</b> certificate.</p><p>Strengthened my knowledge of usability, visual hierarchy, layout, typography, and user-centered design principles to create intuitive and engaging digital experiences.</p></div>
+      </article>
+      <article class="cert-item">
+        <div class="pic"><picture><source srcset="img/cert-aws-cloud-foundations.webp" type="image/webp"><img src="img/cert-aws-cloud-foundations.jpg" alt="AWS Academy Graduate - Cloud Foundations training badge" width="306" height="233" loading="lazy"></picture></div>
+        <h3>AWS Academy Graduate - Cloud Foundations - Training Badge</h3>
+        <div class="cmeta"><span>September 15, 2025</span><span>AWS</span></div>
+        <div class="desc"><p>Earned the <b>AWS Academy Graduate — Cloud Foundations</b> training badge.</p><p>Developed foundational understanding of cloud computing concepts, AWS services, cloud infrastructure, security, and the fundamentals of cloud-based solutions.</p></div>
+      </article>
+      <article class="cert-item">
+        <div class="pic"><picture><source srcset="img/cert-aws-genai-foundations.webp" type="image/webp"><img src="img/cert-aws-genai-foundations.jpg" alt="AWS Academy Graduate - Generative AI Foundations training badge" width="300" height="233" loading="lazy"></picture></div>
+        <h3>AWS Academy Graduate - Generative AI Foundations - Training Badge</h3>
+        <div class="cmeta"><span>April 28, 2026</span><span>AWS</span></div>
+        <div class="desc"><p>Earned the <b>AWS Academy Graduate — Generative AI Foundations</b> training badge.</p><p>Built foundational understanding of generative AI, its capabilities, applications, responsible use, and potential to enhance digital solutions and workflows.</p></div>
+      </article>
+      <article class="cert-item">
+        <div class="pic"><picture><source srcset="img/cert-aws-cloudquest-practitioner.webp" type="image/webp"><img src="img/cert-aws-cloudquest-practitioner.png" alt="AWS Cloud Quest: Cloud Practitioner badge" width="198" height="218" loading="lazy"></picture></div>
+        <h3>AWS Cloud Quest: Cloud Practitioner - Training Badge</h3>
+        <div class="cmeta"><span>October 09, 2025</span><span>AWS</span></div>
+        <div class="desc"><p>Earned the <b>AWS Cloud Quest: Cloud Practitioner</b> training badge.</p><p>Developed foundational understanding of cloud computing concepts, AWS services, cloud infrastructure, security, and the fundamentals of cloud-based solutions.</p></div>
+      </article>
+      <article class="cert-item">
+        <div class="pic"><picture><source srcset="img/cert-aws-cloudquest-genai.webp" type="image/webp"><img src="img/cert-aws-cloudquest-genai.png" alt="AWS Cloud Quest: Generative AI Practitioner badge" width="198" height="218" loading="lazy"></picture></div>
+        <h3>AWS Cloud Quest: Generative AI Practitioner - Training Badge</h3>
+        <div class="cmeta"><span>April 29, 2025</span><span>AWS</span></div>
+        <div class="desc"><p>Earned the <b>AWS Cloud Quest: Generative AI Practitioner</b> training badge.</p><p>Strengthened my understanding of generative AI technologies, AWS AI services, responsible AI principles, and the practical application of generative AI in developing innovative digital solutions.</p></div>
+      </article>
+      <article class="cert-item">
+        <div class="pic"><picture><source srcset="img/cert-cisco-cybersecurity.webp" type="image/webp"><img src="img/cert-cisco-cybersecurity.jpg" alt="Cisco Cybersecurity Essentials certificate" width="296" height="226" loading="lazy"></picture></div>
+        <h3>Cybersecurity Essentials</h3>
+        <div class="cmeta"><span>May 14, 2024</span><span>Cisco</span></div>
+        <div class="desc"><p>Earned the <b>Cybersecurity Essentials</b> certificate.</p><p>Strengthened my understanding of cybersecurity fundamentals, security threats and vulnerabilities, data protection, and essential practices for maintaining secure digital environments.</p></div>
+      </article>
+      <article class="cert-item">
+        <div class="pic"><picture><source srcset="img/cert-cisco-networking.webp" type="image/webp"><img src="img/cert-cisco-networking.jpg" alt="Cisco Networking Basics certificate" width="296" height="227" loading="lazy"></picture></div>
+        <h3>Networking Basics</h3>
+        <div class="cmeta"><span>November 27, 2023</span><span>Cisco</span></div>
+        <div class="desc"><p>Earned the <b>Networking Basics</b> certificate.</p><p>Built a foundational understanding of networking principles, network infrastructure, IP addressing, protocols, and the fundamentals of data communication and connectivity.</p></div>
+      </article>
     </div>
   </div>
 </section>
@@ -123,6 +167,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=10"></script>
+<script src="script.js?v=11"></script>
 </body>
 </html>

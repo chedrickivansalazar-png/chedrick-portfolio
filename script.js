@@ -91,11 +91,13 @@
     var dotsBox = nav.querySelector(".carousel-dots"), prev = nav.querySelector(".prev"), next = nav.querySelector(".next");
     var all = real, on = false, raf = 0, settleTimer = 0;
 
+    var item = nav.getAttribute("data-item") || "item";
+    if (n > 8) dotsBox.classList.add("many");
     var dots = real.map(function (slide, i) {
-      var name = slide.querySelector(".tool b");
+      var name = slide.querySelector(".tool b, h3");
       var d = document.createElement("button");
       d.type = "button";
-      d.setAttribute("aria-label", "Show skill " + (i + 1) + (name ? ": " + name.textContent : ""));
+      d.setAttribute("aria-label", "Show " + item + " " + (i + 1) + (name ? ": " + name.textContent.trim() : ""));
       d.addEventListener("click", function () { goTo(i + CLONES, true); });
       dotsBox.appendChild(d);
       return d;
@@ -164,25 +166,15 @@
     prev.addEventListener("click", function () { goTo(nearest() - 1, true); });
     next.addEventListener("click", function () { goTo(nearest() + 1, true); });
     track.addEventListener("click", function (e) {
-      var card = e.target.closest(".skill");
-      if (on && card && !card.classList.contains("is-active")) goTo(all.indexOf(card), true);
+      if (!on) return;
+      var card = e.target;
+      while (card && card.parentElement !== track) card = card.parentElement;
+      if (card && !card.classList.contains("is-active")) { e.preventDefault(); goTo(all.indexOf(card), true); }
     });
     window.addEventListener("resize", function () { if (on) { goTo(nearest(), false); paint(); } });
     phone.addEventListener("change", function (e) { if (e.matches) enable(); else disable(); });
     if (phone.matches) enable();
   });
-
-  /* experience show all */
-  var xpList = document.getElementById("xp-list"), showAll = document.getElementById("show-all");
-  if (xpList && showAll) {
-    if (xpList.children.length <= 3) showAll.hidden = true;
-    showAll.addEventListener("click", function () {
-      var expand = xpList.classList.contains("collapsed");
-      xpList.classList.toggle("collapsed", !expand);
-      showAll.setAttribute("aria-expanded", String(expand));
-      showAll.firstChild.nodeValue = expand ? "Show Less " : "Show All ";
-    });
-  }
 
   /* faq */
   var faqs = document.querySelectorAll(".faq details");

@@ -6,7 +6,7 @@
 <title>Projects · Chedrick Salazar</title>
 <meta name="description" content="Selected UI/UX design projects by Chedrick Ivan Salazar.">
 <script>
-  try { var t = localStorage.getItem("portfolio-theme"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  try { var t = localStorage.getItem("portfolio-theme"); document.documentElement.setAttribute("data-theme", t === "dark" ? "dark" : "light"); } catch (e) { document.documentElement.setAttribute("data-theme", "light"); }
   (function () {
     var FRAME = 1089, FILL = 0.8, root = document.documentElement;
     function fit() {
@@ -21,8 +21,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700&family=Inter:wght@500;600;800&display=swap">
-<link rel="stylesheet" href="styles.css?v=12">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap">
+<link rel="stylesheet" href="styles.css?v=14">
 </head>
 <body class="projects-page">
 <nav class="nav" id="nav" aria-label="Main">
@@ -46,7 +46,7 @@
 <main class="guides">
 <section class="section proj-head">
   <div class="inner">
-    <h1>Projects</h1>
+    <h1><span class="dim">My most</span><br>recent work</h1>
     <p>Tools I've built for myself and others to solve problems and explore new technologies.</p>
   </div>
 </section>
@@ -56,17 +56,22 @@
     <article class="proj">
       <div class="thumb"><picture><source srcset="img/project-maris.webp" type="image/webp"><img src="img/project-maris.jpg" alt="Maris Coral Garden website home page" width="800" height="461" loading="lazy"></picture></div>
       <div class="body">
-        <h2>Maris Coral Garden</h2>
+        <div class="title"><h2>Maris Coral Garden</h2><span class="tag">Website</span></div>
         <p>Website design project. Case study coming soon.</p>
-        <div class="row"><span class="tag">Website</span><a class="visit" href="#" aria-disabled="true" aria-label="Visit Maris Coral Garden (link coming soon)">Visit</a></div>
       </div>
     </article>
     <article class="proj">
-      <div class="thumb"><span>Coming Soon Nga!</span></div>
+      <div class="thumb"><picture><source srcset="img/project-onsite-timber.webp" type="image/webp"><img src="img/project-onsite-timber.jpg" alt="Onsite Timber website home page" width="478" height="265" loading="lazy"></picture></div>
       <div class="body">
-        <h2>Fast Frame</h2>
+        <div class="title"><h2>Onsite Timber</h2><span class="tag">Website</span></div>
         <p>Website design project. Case study coming soon.</p>
-        <div class="row"><span class="tag">Website</span><a class="visit" href="#" aria-disabled="true" aria-label="Visit Fast Frame (link coming soon)">Visit</a></div>
+      </div>
+    </article>
+    <article class="proj">
+      <div class="thumb"><picture><source srcset="img/project-catalysta.webp" type="image/webp"><img src="img/project-catalysta.jpg" alt="Catalysta website home page" width="478" height="265" loading="lazy"></picture></div>
+      <div class="body">
+        <div class="title"><h2>Catalysta</h2><span class="tag">Website</span></div>
+        <p>Website design project. Case study coming soon.</p>
       </div>
     </article>
   </div>
@@ -92,6 +97,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=10"></script>
+<script src="script.js?v=11"></script>
 </body>
 </html>

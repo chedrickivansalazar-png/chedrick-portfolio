@@ -6,7 +6,7 @@
 <title>Chedrick Salazar Portfolio</title>
 <meta name="description" content="Portfolio of Chedrick Ivan Salazar, UI/UX Designer.">
 <script>
-  try { var t = localStorage.getItem("portfolio-theme"); if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+  try { var t = localStorage.getItem("portfolio-theme"); document.documentElement.setAttribute("data-theme", t === "dark" ? "dark" : "light"); } catch (e) { document.documentElement.setAttribute("data-theme", "light"); }
   (function () {
     var FRAME = 1089, FILL = 0.8, root = document.documentElement;
     function fit() {
@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@500,700,900&display=swap">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap">
-<link rel="stylesheet" href="styles.css?v=12">
+<link rel="stylesheet" href="styles.css?v=14">
 </head>
 <body>
 <nav class="nav" id="nav" aria-label="Main">
@@ -50,9 +50,10 @@
       <div class="live"><i></i>Open to work</div>
       <h1><span class="dim">I turn complex problems into</span> simple digital experiences.</h1>
       <p class="lede"><b>UI/UX Designer</b> creating intuitive digital experiences that balance user needs, business goals, and thoughtful visual design.</p>
-      <a class="btn-mail" href="mailto:chedrickivansalazar@gmail.com">
-        <svg viewBox="0 0 12 11" aria-hidden="true"><path d="M1.2 0h9.5A1.2 1.2 0 0 1 11.9 1.2v7.9a1.2 1.2 0 0 1-1.2 1.2H1.2A1.2 1.2 0 0 1 0 9.1V1.2A1.2 1.2 0 0 1 1.2 0zm.3 1.6v.5L5.9 5a.1.1 0 0 0 .1 0l4.4-2.9v-.5L6 4.4z"/></svg>
-        <span>chedrickivansalazar@gmail.com</span>
+      <a class="btn-gmail" href="mailto:chedrickivansalazar@gmail.com">
+        <picture><source srcset="img/headshot.webp" type="image/webp"><img class="avatar" src="img/headshot.jpg" alt="" width="36" height="36"></picture>
+        <span class="extra" aria-hidden="true"><svg class="plus" viewBox="0 0 12 12"><path d="M6 1.5v9M1.5 6h9"/></svg><svg class="gmail" viewBox="0 0 48 48"><circle cx="24" cy="24" r="24" fill="#fff"/><g transform="translate(9 11) scale(.62)"><path fill="#4caf50" d="M45 16.2l-5 2.75-5 4.75V40h7a3 3 0 0 0 3-3V16.2z"/><path fill="#1e88e5" d="M3 16.2l3.6 1.7 6.4 5.8V40H6a3 3 0 0 1-3-3V16.2z"/><path fill="#e53935" d="M35 11.2l-11 8.25-11-8.25-1 5.8 1 6.7 11 8.25 11-8.25 1-6.7z"/><path fill="#c62828" d="M3 12.3v3.9l10 7.5V11.2L9.9 8.9A4.3 4.3 0 0 0 3 12.3z"/><path fill="#fbc02d" d="M45 12.3v3.9l-10 7.5V11.2l3.1-2.3A4.3 4.3 0 0 1 45 12.3z"/></g></svg></span>
+        <span class="addr">chedrickivansalazar@gmail.com</span>
       </a>
     </div>
     <div class="hero-photo">
@@ -99,12 +100,15 @@
     <div class="about-grid">
       <div>
         <h3 class="col-title">My Experience</h3>
-        <ul class="xp-list collapsed" id="xp-list">
+        <ul class="xp-list" id="xp-list">
           <li class="xp"><b>Freelance - Project Based</b><span>UI/UX Designer - Remote</span><span>March 2023 - September 2024 (1 year and 7 months)</span></li>
           <li class="xp"><b>Internship - Marvil Web Development</b><span>UI/UX Designer - On-Site</span><span>January 2026 - April 2026 (3 months)</span></li>
-          <li class="xp"><b>Catalysta IT</b><span>UI/UX Designer - On-Site</span><span>July 2024 - Present</span></li>
+          <li class="xp"><b>Catalysta IT</b><span>UI/UX Designer - On-Site</span><span>July 2026 - Present</span></li>
         </ul>
-        <button class="show-all" id="show-all" type="button" aria-expanded="false" aria-controls="xp-list">Show All <i aria-hidden="true"></i></button>
+        <a class="dl-card" href="files/Chedrick-Salazar-Resume-Portfolio.pdf" download>
+          <span class="dl-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2.5H6.5a2 2 0 0 0-2 2v15a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V8z"/><path d="M14 2.5V8h5.5"/></svg></span>
+          <span class="dl-txt"><b>Download</b><span>Resume and Portfolio</span></span>
+        </a>
       </div>
       <div class="bio-col">
         <div class="bio">
@@ -297,6 +301,6 @@
   </div>
 </footer>
 
-<script src="script.js?v=10"></script>
+<script src="script.js?v=11"></script>
 </body>
 </html>
